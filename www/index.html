@@ -6,8 +6,10 @@
         <script type="text/javascript"src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
 
-            // Wait for device API libraries to load
-            document.addEventListener("deviceready", onDeviceReady, false);
+            $(document).ready(function() {
+                // Wait for device API libraries to load
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
 
             // device APIs are available
 
@@ -24,7 +26,7 @@
             // onSuccess: Get a snapshot of the current contacts
 
             function onSuccess(contacts) {
-                $('#contacts').html('<ul id="contacts_list"></ul>');
+                $('#contacts').html('<ul id="contacts_list">casa</ul>');
                 for (var i = 0; i < contacts.length; i++) {
                     $('#contacts_list').append('<li class="contact">' + contacts[i].displayName + '</li>');
                     console.log(contacts[i].displayName);
@@ -42,6 +44,6 @@
     </head>
 
     <body>
-        <div id="contacts"><div>
+        <div id="contacts"></div>
     </body>
 </html>
