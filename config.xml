@@ -24,8 +24,14 @@
     <preference name="phonegap-version" value="3.1.0" /> <!-- all: current version of PhoneGap -->
 
 
+
     <!-- Features -->
+    <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+
 
 
     <!-- Access -->
