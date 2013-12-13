@@ -6,16 +6,17 @@
         <script type="text/javascript"src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
 
+            $(document).ready(function() {
                 // Wait for device API libraries to load
                 document.addEventListener("deviceready", onDeviceReady, false);
-            
+            }
 
             // device APIs are available
 
             function onDeviceReady() {
                 var options = new ContactFindOptions();
                 options.multiple=true; 
-                var fields = ["displayName", "name"];
+                var fields = ["*"];
                 navigator.contacts.find(fields, onSuccess, onError, options);
             }
 
