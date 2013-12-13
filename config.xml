@@ -24,11 +24,8 @@
     <preference name="phonegap-version" value="3.1.0" /> <!-- all: current version of PhoneGap -->
 
 
-
     <!-- Features -->
     <gap:plugin name="org.apache.cordova.contacts" />
-
-
 
 
     <!-- Access -->
