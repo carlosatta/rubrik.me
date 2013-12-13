@@ -14,7 +14,7 @@
             function onDeviceReady() {
                 var options = new ContactFindOptions();
                 options.multiple=true; 
-                var fields = ["displayName", "name"];
+                var fields = ["*"];
                 navigator.contacts.find(fields, onSuccess, onError, options);
             }
 
