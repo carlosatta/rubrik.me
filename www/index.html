@@ -9,32 +9,33 @@
             $(document).ready(function() {
                 // Wait for device API libraries to load
                 document.addEventListener("deviceready", onDeviceReady, false);
-            }
+            
 
             // device APIs are available
 
-             function onDeviceReady() {
-                var options = new ContactFindOptions();
-                options.multiple=true; 
-                var fields = ["displayName", "name"];
-                navigator.contacts.find(fields, onSuccess, onError, options);
-            }
-
-            // onSuccess: Get a snapshot of the current contacts
-
-            function onSuccess(contacts) {
-                $('#contacts').html('<ul id="contacts_list">casa</ul>');
-                for (var i = 0; i < contacts.length; i++) {
-                    $('#contacts_list').append('<li class="contact">' + contacts[i].displayName + '</li>');
-                    console.log(contacts[i].displayName);
+                function onDeviceReady() {
+                    var options = new ContactFindOptions();
+                    options.multiple=true; 
+                    var fields = ["displayName", "name"];
+                    navigator.contacts.find(fields, onSuccess, onError, options);
                 }
-            }
 
-            // onError: Failed to get the contacts
+                // onSuccess: Get a snapshot of the current contacts
 
-            function onError(contactError) {
-                alert('onError!');
-                console.log(contactError);
+                function onSuccess(contacts) {
+                    $('#contacts').html('<ul id="contacts_list">casa</ul>');
+                    for (var i = 0; i < contacts.length; i++) {
+                        $('#contacts_list').append('<li class="contact">' + contacts[i].displayName + '</li>');
+                        console.log(contacts[i].displayName);
+                    }
+                }
+
+                // onError: Failed to get the contacts
+
+                function onError(contactError) {
+                    alert('onError!');
+                    console.log(contactError);
+                }
             }
 
         </script>
