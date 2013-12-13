@@ -3,6 +3,7 @@
     <head>
         <title>Contact Example</title>
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript"src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
 
             // Wait for device API libraries to load
@@ -23,8 +24,10 @@
             // onSuccess: Get a snapshot of the current contacts
 
             function onSuccess(contacts) {
+                $('#contacts').html('<ul id="contacts_list"></ul>');
                 for (var i = 0; i < contacts.length; i++) {
-                    alert("Display Name = " + contacts[i].displayName);
+                    $('#contacts_list').append('<li class="contact">' + contacts[i].displayName + '</li>');
+                    console.log(contacts[i].displayName);
                 }
             }
 
@@ -39,7 +42,6 @@
     </head>
 
     <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <div id="contacts"><div>
     </body>
 </html>
