@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "me.rubrik.app"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+    
+    <!-- Generic Info -->
+    <name>Rubrik.me</name>
+    <description></description>
+    <author href="https://rubrik.me" email="info@rubrik.me">
+        Carlo Satta
+    </author>
+
+
+
+    <!-- Configuration -->
+    <gap:platform name="android" />
+
+    <!-- Plugin -->
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+
+    <!-- Preference -->
+    <preference name="phonegap-version" value="3.1.0" /> <!-- all: current version of PhoneGap -->
+
+    <!-- Features -->
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
+
+    <!-- Access -->
+    <access origin="http://rubrik.me" subdomains="true" />
+
+</widget>
