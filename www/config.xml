@@ -16,21 +16,31 @@
 
 
 
-    <!-- Configuration -->
+    <!-- Preference -->
+    <preference name="permissions" value="none"/>
+    <preference name="phonegap-version" value="3.1.0" /> <!-- all: current version of PhoneGap -->
+
+    <!-- Customize your app and platform with the preference element. -->
     <gap:platform name="android" />
 
     <!-- Plugin -->
+
+    <!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.contacts" />
     <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    
 
-    <!-- Preference -->
-    <preference name="phonegap-version" value="3.1.0" /> <!-- all: current version of PhoneGap -->
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon src="res/icon/android/drawable-ldpi/ic_launcher.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="res/icon/android/drawable-mdpi/ic_launcher.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="res/icon/android/drawable-hdpi/ic_launcher.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="res/icon/android/drawable-xhdpi/ic_launcher.png" gap:platform="android" gap:density="xhdpi" />
 
-    <!-- Features -->
-    <feature name="http://api.phonegap.com/1.0/contacts"/>
+    <!-- Define app splash screen for each platform. -->
 
     <!-- Access -->
     <access origin="http://rubrik.me" subdomains="true" />
