@@ -43,6 +43,5 @@
     <!-- Define app splash screen for each platform. -->
 
     <!-- Access -->
-    <access origin="*" subdomains="true" />
 
 </widget>
