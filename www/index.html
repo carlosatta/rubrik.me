@@ -12,11 +12,11 @@
 
              function onDeviceReady() {
                 // find all contacts with 'Bob' in any name field
-                //var options = new ContactFindOptions();
-                //options.filter = "Bob";
+                var options = new ContactFindOptions();
+                options.multiple=true; 
                 alert('Search');
                 var fields = ["displayName", "name"];
-                navigator.contacts.find(fields, onSuccess, onError);
+                navigator.contacts.find(fields, onSuccess, onError, options);
                 alert('End Search');
             }
 
