@@ -6,8 +6,7 @@
         version     = "1.0.0" >
 
     <!-- versionCode is optional and Android only -->
-    <preference name="phonegap-version" value="3.1.0" />
-
+    
 
     <name>Rubrik.me</name>
     <description></description>
@@ -19,11 +18,17 @@
     <gap:platform name="android" />
 
 
+    <!-- Preference -->
+    <preference name="phonegap-version" value="3.1.0" />
     <preference name="fullscreen" value="true" />
 
-
+    <!-- Features -->
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
 
 
+    <!-- Access -->
+    <access origin="http://rubrik.me" subdomains="true" />
 
 </widget>
