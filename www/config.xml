@@ -43,6 +43,6 @@
     <!-- Define app splash screen for each platform. -->
 
     <!-- Access -->
-    <access origin="http://rubrik.me" subdomains="true" />
+    <access origin="*" subdomains="true" />
 
 </widget>
