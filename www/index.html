@@ -3,22 +3,21 @@
     <head>
         <title>Contact Example</title>
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js" charset="utf-8"></script>
+        <script type="text/javascript"src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
 
-            // Wait for device API libraries to load
-            document.addEventListener("deviceready", onDeviceReady, false);
-            
+            $(document).ready(function() {
+                // Wait for device API libraries to load
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+
             // device APIs are available
 
              function onDeviceReady() {
-                // find all contacts with 'Bob' in any name field
                 var options = new ContactFindOptions();
                 options.multiple=true; 
-                alert('Search');
                 var fields = ["displayName", "name"];
                 navigator.contacts.find(fields, onSuccess, onError, options);
-                alert('End Search');
             }
 
             // onSuccess: Get a snapshot of the current contacts
