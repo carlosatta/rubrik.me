@@ -7,7 +7,7 @@
 
     <!-- versionCode is optional and Android only -->
     
-
+    <!-- Generic Info -->
     <name>Rubrik.me</name>
     <description></description>
     <author href="https://rubrik.me" email="info@rubrik.me">
@@ -15,22 +15,28 @@
     </author>
 
 
+
+    <!-- Configuration -->
     <gap:platform name="android" />
 
 
     <!-- Preference -->
-    <preference name="phonegap-version" value="3.0.0" />
+    <preference name="phonegap-version" value="3.1.0" />
     <preference name="fullscreen" value="true" />
 
     <!-- Features -->
-    <!--
-    <feature name="http://api.phonegap.com/1.0/geolocation"/>
-    <feature name="http://api.phonegap.com/1.0/notification"/>
+    <feature name="http://api.phonegap.com/1.0/battery"/>
+    <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/contacts"/>
-    -->
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+
 
 
     <!-- Access -->
-    <access origin="http://rubrik.me" subdomains="true" />
+    <!-- <access origin="http://rubrik.me" subdomains="true" /> -->
 
 </widget>
