@@ -6,8 +6,6 @@
         <script type="text/javascript"src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
 
-            // Wait for device API libraries to load
-            document.addEventListener("deviceready", onDeviceReady, false);
   
             // device APIs are available
 
@@ -33,6 +31,12 @@
             function onError(contactError) {
                 alert('onError!');
                 console.log(contactError);
+            }
+
+
+             $(document).ready(function() {
+                // Wait for device API libraries to load
+                document.addEventListener("deviceready", onDeviceReady, false);
             }
 
         </script>
